@@ -13,6 +13,7 @@ using System.IO;
 namespace Hasher
 {
     //TODO formatting of lbl_or when in compare mode
+    //TODO Make hash check better
     public partial class Form1 : Form
     {
 
@@ -127,7 +128,7 @@ namespace Hasher
                 }
 
                 //Make sure that the value of the second textbox is either a file or a hash (Can be made more precise)
-                if (!File.Exists(tb_string.Text) && (tb_string.Text.Length != 32 || tb_string.Text.Length != 64 || tb_string.Text.Length != 128))
+                if (!File.Exists(tb_string.Text) || (tb_string.Text.Length != 32 && tb_string.Text.Length != 64 && tb_string.Text.Length != 128))
                 {
                     MessageBox.Show("Input is neither a file nor a hash, please check input!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
