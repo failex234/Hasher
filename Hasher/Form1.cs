@@ -13,7 +13,7 @@ using System.IO;
 namespace Hasher
 {
     //TODO formatting of lbl_or when in compare mode
-    //TODO Make hash check better
+    //TODO be less stupid with hashfiles / Check if file actually contains an actual sum
     public partial class Form1 : Form
     {
 
@@ -77,6 +77,30 @@ namespace Hasher
 
         }
 
+        
+        private Boolean IsHash(String hash)
+        {
+            int threshNumStart = '0';
+            int threshNumEnd = '9';
+            int threshCharStart = 'a';
+            int threshCharEnd = 'f';
+
+            //Loop through the String and check every character
+            foreach (char c in hash)
+            {
+                //Check if all characters in the hash are base16
+                if (c >= threshNumStart && c <= threshNumEnd || c >= threshCharStart && c <= threshCharEnd)
+                {
+                    continue;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
         private void btn_hash_Click(object sender, EventArgs e)
         {
             //Check if compare mode is on
@@ -128,7 +152,7 @@ namespace Hasher
                 }
 
                 //Make sure that the value of the second textbox is either a file or a hash (Can be made more precise)
-                if (!File.Exists(tb_string.Text) || (tb_string.Text.Length != 32 && tb_string.Text.Length != 64 && tb_string.Text.Length != 128))
+                if ((!File.Exists(tb_string.Text) && (tb_string.Text.Length != 32 && tb_string.Text.Length != 64 && tb_string.Text.Length != 128)) || !IsHash(tb_string.Text) && !File.Exists(tb_string.Text))
                 {
                     MessageBox.Show("Input is neither a file nor a hash, please check input!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -144,14 +168,21 @@ namespace Hasher
                         String hashfromfile = sr.ReadLine().Split(' ')[0];
                         sr.Close();
 
+                        //Hash from the first field / The file to test for integrity
+                        String filehash = CalculateHash(tb_file.Text, 0);
                         //Just compare both hashes
-                        if (CalculateHash(tb_file.Text, 0).Equals(hashfromfile))
+                        if (filehash.Equals(hashfromfile))
                         {
                             tb_hash.Text = "hashes ARE the same";
                         }
                         else
                         {
-                            tb_hash.Text = "hases are NOT the same";
+                            tb_hash.Text = "hahses are NOT the same";
+
+                            if (filehash.Length != hashfromfile.Length)
+                            {
+                                MessageBox.Show("The hashes have different lengths. Please be sure that both hashes are from the same algorithm!", "Unequal hash length", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
                         }
                     }
                     catch
@@ -162,16 +193,22 @@ namespace Hasher
                 }
                 else
                 {
+                    String filehash = CalculateHash(tb_file.Text, 0);
                     String secondhash = tb_string.Text;
 
                     //Just compare both hashes
-                    if (CalculateHash(tb_file.Text, 0).Equals(secondhash))
+                    if (filehash.Equals(secondhash))
                     {
                         tb_hash.Text = "hashes ARE the same";
                     }
                     else
                     {
-                        tb_hash.Text = "hases are NOT the same";
+                        tb_hash.Text = "hashes are NOT the same";
+
+                        if (filehash.Length != secondhash.Length)
+                        {
+                            MessageBox.Show("The hashes have different lengths. Please be sure that both hashes are from the same algorithm!", "Unequal hash length", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                 }
             }
