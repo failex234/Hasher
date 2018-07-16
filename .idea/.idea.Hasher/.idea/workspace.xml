@@ -16,8 +16,8 @@
       <file leaf-file-name="Form1.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Hasher/Form1.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="88" lean-forward="true" selection-start-line="8" selection-start-column="88" selection-end-line="8" selection-end-column="88" />
+            <state relative-caret-position="210">
+              <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
               <folding>
                 <marker date="1531768484923" expanded="true" signature="6:94" ph="..." />
                 <marker date="1531768484923" expanded="true" signature="112:9866" ph="{...}" />
@@ -175,12 +175,12 @@
       <option name="presentableId" value="Default" />
       <updated>1531762095632</updated>
       <workItem from="1531762102484" duration="1822000" />
-      <workItem from="1531767403895" duration="1182000" />
+      <workItem from="1531767403895" duration="1250000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3004000" />
+    <option name="totallyTimeSpent" value="3072000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -300,8 +300,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Hasher/Form1.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="88" lean-forward="true" selection-start-line="8" selection-start-column="88" selection-end-line="8" selection-end-column="88" />
+        <state relative-caret-position="210">
+          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
           <folding>
             <marker date="1531768484923" expanded="true" signature="6:94" ph="..." />
             <marker date="1531768484923" expanded="true" signature="112:9866" ph="{...}" />
