@@ -194,7 +194,7 @@ namespace Hasher
 
                             if (filehash.Length != hashfromfile.Length)
                             {
-                                MessageBox.Show(@"You hashed the input file as " + GetHashType(filehash) + @" but the second hash is " + GetHashType(hashfromfile) + @". Maybe you want to switch to " + GetHashType(hashfromfile), @"Unequal hash length", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show(@"You hashed the input file as " + GetHashType(filehash) + @" but the second hash is " + GetHashType(hashfromfile) + @". You may want to switch to " + GetHashType(hashfromfile), @"Unequal hash length", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                     }
@@ -219,7 +219,7 @@ namespace Hasher
 
                         if (filehash.Length != secondhash.Length)
                         {
-                            MessageBox.Show(@"You hashed the input file as " + GetHashType(filehash) + @" but the second hash is " + GetHashType(secondhash) + @". Maybe you want to switch to " + GetHashType(secondhash), @"Unequal hash length", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show(@"You hashed the input file as " + GetHashType(filehash) + @" but the second hash is " + GetHashType(secondhash) + @". You may want to switch to " + GetHashType(secondhash), @"Unequal hash length", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                 }
