@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using System.IO;
@@ -16,8 +9,7 @@ namespace Hasher
     //TODO be less stupid with hashfiles / Check if file actually contains an actual sum
     public partial class Form1 : Form
     {
-
-        Boolean compare = false;
+        private bool _compare;
 
         public Form1()
         {
@@ -27,7 +19,7 @@ namespace Hasher
         private void button1_Click(object sender, EventArgs e)
         {
             //Open the file dialog and set the value of the textbox to the filepath of the selected file
-            DialogResult result = fd.ShowDialog();
+            var result = fd.ShowDialog();
 
             if (result == DialogResult.OK)
             {
@@ -40,7 +32,7 @@ namespace Hasher
             rb_md5.Select();
         }
 
-        public static Stream GenerateStreamFromString(String s)
+        private static Stream GenerateStreamFromString(string s)
         {
             //Write String into a new Stream using a StreamWriter
             var stream = new MemoryStream();
@@ -55,7 +47,7 @@ namespace Hasher
         * type = 0 | File
         * type = 1 | String
         */
-        string CalculateHash(String s, int type)
+        private string CalculateHash(string s, int type)
         {
             HashAlgorithm hash;
 
@@ -65,7 +57,7 @@ namespace Hasher
             else if (rb_sha512.Checked) hash = SHA512.Create();
             else
             {
-                MessageBox.Show("Invalid state", "You have selected an invalid hash algorithm!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(@"Invalid state", @"You have selected an invalid hash algorithm!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return "ERROR";
             }
 
@@ -78,20 +70,19 @@ namespace Hasher
         }
 
         
-        private Boolean IsHash(String hash)
+        private static bool IsHash(string hash)
         {
-            int threshNumStart = '0';
-            int threshNumEnd = '9';
-            int threshCharStart = 'a';
-            int threshCharEnd = 'f';
+            const int threshNumStart = '0';
+            const int threshNumEnd = '9';
+            const int threshCharStart = 'a';
+            const int threshCharEnd = 'f';
 
             //Loop through the String and check every character
-            foreach (char c in hash)
+            foreach (var c in hash)
             {
                 //Check if all characters in the hash are base16
                 if (c >= threshNumStart && c <= threshNumEnd || c >= threshCharStart && c <= threshCharEnd)
                 {
-                    continue;
                 }
                 else
                 {
@@ -101,24 +92,39 @@ namespace Hasher
             return true;
         }
 
+        private static string GetHashType(string hash)
+        {
+            if (!IsHash(hash)) return "Not a Hash";
+            switch (hash.Length)
+            {
+                case 32:
+                    return "MD5";
+                case 64:
+                    return "SHA-256";
+                case 128:
+                    return "SHA-512";
+            }
+
+            return "Unknown";
+
+        }
+
         private void btn_hash_Click(object sender, EventArgs e)
         {
             //Check if compare mode is on
-            if (!compare)
+            if (!_compare)
             {
                 //Check if all needed textboxes are filled / have legal values
-                String hash = "";
+                string hash;
                 if (tb_file.Text == "")
                 {
                     if (tb_string.Text == "")
                     {
-                        MessageBox.Show("You need to select a file or enter a String", "Input missing!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(@"You need to select a file or enter a String", @"Input missing!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-                    else
-                    {
-                        hash = CalculateHash(tb_string.Text, 1);
-                    }
+
+                    hash = CalculateHash(tb_string.Text, 1);
                 }
                 else
                 {
@@ -129,7 +135,7 @@ namespace Hasher
                     }
                     else
                     {
-                        MessageBox.Show("The selected file doesn't exist!", "File not found!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(@"The selected file doesn't exist!", @"File not found!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                 }
@@ -141,20 +147,20 @@ namespace Hasher
                 //Check if both textboxes are not empty
                 if (tb_file.Text == "" || tb_string.Text == "")
                 {
-                    MessageBox.Show("Both Textboxes need to contain a value to compare", "Empty Textbox", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(@"Both Textboxes need to contain a value to compare", @"Empty Textbox", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
                 if (!File.Exists(tb_file.Text))
                 {
-                    MessageBox.Show("The selected file doesn't exist!", "File not found!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(@"The selected file doesn't exist!", @"File not found!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
                 //Make sure that the value of the second textbox is either a file or a hash (Can be made more precise)
                 if ((!File.Exists(tb_string.Text) && (tb_string.Text.Length != 32 && tb_string.Text.Length != 64 && tb_string.Text.Length != 128)) || !IsHash(tb_string.Text) && !File.Exists(tb_string.Text))
                 {
-                    MessageBox.Show("Input is neither a file nor a hash, please check input!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(@"Input is neither a file nor a hash, please check input!", @"Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -164,50 +170,56 @@ namespace Hasher
                     {
                         //Read sum from file. Most sum files have the layout "hashsum filename"
                         //So we want to isolate the hashsum from the filename
-                        StreamReader sr = new StreamReader(tb_string.Text);
-                        String hashfromfile = sr.ReadLine().Split(' ')[0];
+                        var sr = new StreamReader(tb_string.Text);
+                        var hashfromfile = sr.ReadLine()?.Split(' ')[0];
                         sr.Close();
 
                         //Hash from the first field / The file to test for integrity
-                        String filehash = CalculateHash(tb_file.Text, 0);
+                        var filehash = CalculateHash(tb_file.Text, 0);
                         //Just compare both hashes
                         if (filehash.Equals(hashfromfile))
                         {
-                            tb_hash.Text = "hashes ARE the same";
+                            tb_hash.Text = @"hashes ARE the same";
                         }
                         else
                         {
-                            tb_hash.Text = "hahses are NOT the same";
+                            tb_hash.Text = @"hahses are NOT the same";
+
+                            if (hashfromfile == null)
+                            {
+                                MessageBox.Show(@"An error occured while getting the hash from the hashsum file",
+                                    @"An error has occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
 
                             if (filehash.Length != hashfromfile.Length)
                             {
-                                MessageBox.Show("The hashes have different lengths. Please be sure that both hashes are from the same algorithm!", "Unequal hash length", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show(@"You hashed the input file as " + GetHashType(filehash) + @" but the second hash is " + GetHashType(hashfromfile) + @". Maybe you want to switch to " + GetHashType(hashfromfile), @"Unequal hash length", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                     }
                     catch
                     {
-                        MessageBox.Show("Error while reading file", "Can't read file", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
+                        MessageBox.Show(@"Error while reading file", @"Can't read file", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    String filehash = CalculateHash(tb_file.Text, 0);
-                    String secondhash = tb_string.Text;
+                    var filehash = CalculateHash(tb_file.Text, 0);
+                    var secondhash = tb_string.Text;
 
                     //Just compare both hashes
                     if (filehash.Equals(secondhash))
                     {
-                        tb_hash.Text = "hashes ARE the same";
+                        tb_hash.Text = @"hashes ARE the same";
                     }
                     else
                     {
-                        tb_hash.Text = "hashes are NOT the same";
+                        tb_hash.Text = @"hashes are NOT the same";
 
                         if (filehash.Length != secondhash.Length)
                         {
-                            MessageBox.Show("The hashes have different lengths. Please be sure that both hashes are from the same algorithm!", "Unequal hash length", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show(@"You hashed the input file as " + GetHashType(filehash) + @" but the second hash is " + GetHashType(secondhash) + @". Maybe you want to switch to " + GetHashType(secondhash), @"Unequal hash length", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                 }
@@ -221,17 +233,17 @@ namespace Hasher
             {
                 btn_browse2.Visible = true;
                 btn_browse2.Enabled = true;
-                lbl_or.Text = "and enter a Hash / browse a hash file to compare to";
-                compare = true;
-                btn_hash.Text = "Compare";
+                lbl_or.Text = @"and enter a Hash / browse a hash file to compare to";
+                _compare = true;
+                btn_hash.Text = @"Compare";
             }
             else
             {
                 btn_browse2.Visible = false;
                 btn_browse2.Enabled = false;
-                lbl_or.Text = "or enter a String";
-                compare = false;
-                btn_hash.Text = "Calculate";
+                lbl_or.Text = @"or enter a String";
+                _compare = false;
+                btn_hash.Text = @"Calculate";
             }
         }
 

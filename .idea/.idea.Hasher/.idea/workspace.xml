@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="be770933-c381-43bc-a72c-60b92851c8a7" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/Hasher/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hasher/Form1.cs" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Form1.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Hasher/Form1.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="88" lean-forward="true" selection-start-line="8" selection-start-column="88" selection-end-line="8" selection-end-column="88" />
+              <folding>
+                <marker date="1531768484923" expanded="true" signature="6:94" ph="..." />
+                <marker date="1531768484923" expanded="true" signature="112:9866" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="119:256" ph="/* TODO formatting of lbl_or when in compare mode ... */" />
+                <marker date="1531768484923" expanded="true" signature="294:9864" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="355:410" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="474:757" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="675:747" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="818:867" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="933:1232" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="1242:1310" ph="/* type = 0 | File ... */" />
+                <marker date="1531768484923" expanded="true" signature="1367:2179" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="1690:1894" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="1987:2168" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="2237:2885" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="2522:2850" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="2709:2745" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="2766:2836" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="2941:3292" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="3036:3250" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="3357:8723" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="3436:4538" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="3598:3970" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="3662:3890" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="3991:4486" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="4118:4225" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="4250:4468" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="4555:8713" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="4689:4906" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="4955:5157" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="5484:5707" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="5757:7764" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="5799:7542" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="5846:5995" ph="/* Read sum from file. Most sum files have the layout &quot;hashsum filename&quot; ... */" />
+                <marker date="1531768484923" expanded="true" signature="6438:6557" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="6586:7520" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="6738:7058" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="7131:7494" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="7589:7746" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="7785:8699" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="8024:8131" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="8156:8681" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="8312:8659" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="8799:9494" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="8938:9217" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="9234:9484" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="9562:9858" ph="{...}" />
+                <marker date="1531768484923" expanded="true" signature="9773:9848" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Hasher/Form1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1050938A-B6ED-4269-8BDE-160668E4367C/5a/10e21f5a/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1050938A-B6ED-4269-8BDE-160668E4367C/1b/e0da69b0/EventArgs.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Hasher/Form1.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Hasher (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Hasher (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Hasher" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Hasher/bin/Debug/Hasher.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Hasher/bin/Debug" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Hasher/Hasher.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.6.1" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="be770933-c381-43bc-a72c-60b92851c8a7" name="Default" comment="" />
+      <created>1531762095632</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1531762095632</updated>
+      <workItem from="1531762102484" duration="1822000" />
+      <workItem from="1531767403895" duration="1182000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3004000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="-1" width="1920" height="1042" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Unit Tests" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3148148" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="NuGet" order="7" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18230277" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="7" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Hasher/Form1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1290">
+          <caret line="86" column="25" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
+          <folding>
+            <marker date="1531768484923" expanded="true" signature="6:94" ph="..." />
+            <marker date="1531768484923" expanded="true" signature="112:9866" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="119:256" ph="/* TODO formatting of lbl_or when in compare mode ... */" />
+            <marker date="1531768484923" expanded="true" signature="294:9864" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="355:410" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="474:757" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="675:747" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="818:867" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="933:1232" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="1242:1310" ph="/* type = 0 | File ... */" />
+            <marker date="1531768484923" expanded="true" signature="1367:2179" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="1690:1894" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="1987:2168" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="2237:2885" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="2522:2850" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="2709:2745" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="2766:2836" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="2941:3292" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="3036:3250" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="3357:8723" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="3436:4538" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="3598:3970" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="3662:3890" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="3991:4486" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="4118:4225" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="4250:4468" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="4555:8713" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="4689:4906" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="4955:5157" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="5484:5707" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="5757:7764" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="5799:7542" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="5846:5995" ph="/* Read sum from file. Most sum files have the layout &quot;hashsum filename&quot; ... */" />
+            <marker date="1531768484923" expanded="true" signature="6438:6557" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="6586:7520" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="6738:7058" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="7131:7494" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="7589:7746" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="7785:8699" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="8024:8131" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="8156:8681" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="8312:8659" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="8799:9494" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="8938:9217" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="9234:9484" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="9562:9858" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="9773:9848" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1050938A-B6ED-4269-8BDE-160668E4367C/5a/10e21f5a/Object.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1050938A-B6ED-4269-8BDE-160668E4367C/1b/e0da69b0/EventArgs.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hasher/Form1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="88" lean-forward="true" selection-start-line="8" selection-start-column="88" selection-end-line="8" selection-end-column="88" />
+          <folding>
+            <marker date="1531768484923" expanded="true" signature="6:94" ph="..." />
+            <marker date="1531768484923" expanded="true" signature="112:9866" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="119:256" ph="/* TODO formatting of lbl_or when in compare mode ... */" />
+            <marker date="1531768484923" expanded="true" signature="294:9864" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="355:410" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="474:757" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="675:747" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="818:867" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="933:1232" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="1242:1310" ph="/* type = 0 | File ... */" />
+            <marker date="1531768484923" expanded="true" signature="1367:2179" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="1690:1894" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="1987:2168" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="2237:2885" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="2522:2850" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="2709:2745" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="2766:2836" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="2941:3292" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="3036:3250" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="3357:8723" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="3436:4538" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="3598:3970" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="3662:3890" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="3991:4486" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="4118:4225" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="4250:4468" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="4555:8713" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="4689:4906" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="4955:5157" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="5484:5707" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="5757:7764" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="5799:7542" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="5846:5995" ph="/* Read sum from file. Most sum files have the layout &quot;hashsum filename&quot; ... */" />
+            <marker date="1531768484923" expanded="true" signature="6438:6557" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="6586:7520" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="6738:7058" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="7131:7494" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="7589:7746" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="7785:8699" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="8024:8131" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="8156:8681" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="8312:8659" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="8799:9494" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="8938:9217" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="9234:9484" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="9562:9858" ph="{...}" />
+            <marker date="1531768484923" expanded="true" signature="9773:9848" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
